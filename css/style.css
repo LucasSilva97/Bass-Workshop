@@ -1,0 +1,233 @@
+/*
+    OBSERVAÇÕES QUANTO A ESCRITA DO CÓDIGO: 
+Algumas tags foram referenciadas diretamente no style (sem o uso de class ou ID)
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ Página com seu corpo em fundo preto
+*/
+body{
+    background-color: #000000;
+}
+
+/*
+    Elemento com o título da página
+*/
+
+h1{
+    background: #640404;
+    box-sizing: border-box;
+    background-size: cover;
+    position: relative;
+    width: 900px;
+    height: 60px;
+    margin: auto;
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    padding-top: 1.0rem;
+}
+
+/*
+ Estilo da seção da página, e dentro dela deve estar contido o formulário da página
+*/
+
+section{
+    background: url("../images/bassman.png");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-size: cover;
+    position: relative;
+    margin: auto;
+    top: 1.8rem;
+    padding: 15px;
+    width: 50rem;
+    height: 450px;
+    text-align: center;
+}
+
+/*
+    Estilizando o sub-título, aquele que está contido dentro da section (acima do formulário)
+*/
+
+h3{
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/*
+    Dando estilo ao container do formulário
+*/
+
+form{
+    overflow: hidden;
+    margin: 2.0rem;
+    padding: 1.2rem 2.0rem 6.0rem 2.0rem;
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 35.0rem;
+    height: 20.0rem;
+    border: 1px solid rgba(0,0,0,0.8);
+    border-radius: 1%;
+    box-shadow: 3px 3px 10px #000;
+    margin: auto;
+    padding-top: 2.0rem;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.8vw;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/*
+    Estilo dos inputs - trazendo um background transparente, fazendo sobresair/não cobrir 
+    visualmente o background da section da página
+*/
+
+.name, .email{
+    background: transparent;
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 25rem;
+    height: 2.0rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 1%;
+    box-shadow: 2px 2px 8px #000;
+    padding: 0;
+    
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.0rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;  
+
+
+}
+
+/* Texto do select*/
+.label-text{
+    font-family: 'ubuntu', Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.0rem;
+    text-shadow: 0 0 5px #808080;
+}
+
+/*Dando estilo ao seletor, onde o usuário deverá seleciona o seu Estado*/
+
+select{
+    width: 14rem;
+    height: 1.5rem;
+    background-color: #f5f5dcbb;
+    font-family: 'ubuntu', Helvetica, sans-serif;
+    color: rgba(0,0,0,0.6);
+    font-size: 0.9rem;
+    text-align: center;
+    text-shadow: 0 1px 5px #808080;
+    
+    background-image: url('../images/arrow.jpg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px);
+
+    /*Foi utilizado o "appearance" para garantir que os navegadores, como Chrome e Firefox,
+    exibam apenas o arrow ("a setinha") personalizada, e não a padrão que aparece no select*/
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/*Estilo do Botão submit*/
+
+.play{
+    background: url("../images/play_submit.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    box-sizing: content-box;
+    border: none;
+    width: 2.0rem;
+    height: 2.0rem;
+    margin-top: 3.0rem;
+}
+
+/*Estilo da legenda do botão*/
+
+.legend{
+    font-family: 'ubuntu', Helvetica, sans-serif;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px #808080;
+}
+
+/*Media queries - trabalhando a responsividade do site*/
+
+@media screen and (max-width: 830px){
+
+
+    h1{
+        max-width: 580px;
+        height: 80px;
+        font-size: 2.1rem;
+        margin: auto;
+    }
+
+
+    h3{
+        font-size: 2.1rem;
+    }
+
+    section{
+        max-width: 30.0rem;
+        height: 40.0rem;
+        margin: auto;
+    }    
+
+    form{
+        max-width: 25.0rem;
+        height: 23.0rem;
+    }
+
+    #name, #email{
+        max-width: 20.0rem;
+        height: 3.5rem;
+        font-size: 1.5rem;
+    }
+
+    .label-text, .legend{
+        font-size: 1.4rem;
+    }
+
+    select{
+        width: 12.0rem;
+        height: 1.8rem;
+        font-size: 1.3rem;
+    }
+
+    @media screen and (max-width: 530px){
+        section{
+            left: 50px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
